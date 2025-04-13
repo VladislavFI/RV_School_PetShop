@@ -10,3 +10,4 @@ pytest==8.3.5
 referencing==0.36.2
 rpds-py==0.24.0
 typing_extensions==4.13.2
+requests
