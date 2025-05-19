@@ -36,7 +36,7 @@ class TestPet:
                 "id": 10,
                 "name": "doggie",
                 "category": {"id": 1, "name": "Dogs"},
-                "photoUrls": ["https://test.tu/"],
+                "photoUrls": ["string"],
                 "tags": [{"id": 0, "name": "string"}],
                 "status": "available"
             }
