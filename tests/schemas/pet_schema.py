@@ -1,32 +1,22 @@
 PET_SCHEMA = {
   "title": "Pet",
   "type": "object",
-  "required": ["id", "name", "photoUrls", "status"],
+  "required": ["id", "name", "status"],  # photoUrls не обязательное
   "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "name": {
-      "type": "string"
-    },
+    "id": {"type": "integer"},
+    "name": {"type": "string"},
     "category": {
       "type": "object",
       "required": ["id", "name"],
       "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        }
+        "id": {"type": "integer"},
+        "name": {"type": "string"}
       }
     },
     "photoUrls": {
       "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 1
+      "items": {"type": "string"},
+      "minItems": 0  # разрешаем пустой массив
     },
     "tags": {
       "type": "array",
@@ -34,12 +24,8 @@ PET_SCHEMA = {
         "type": "object",
         "required": ["id", "name"],
         "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          }
+          "id": {"type": "integer"},
+          "name": {"type": "string"}
         }
       }
     },
